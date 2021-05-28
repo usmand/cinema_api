@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_28_193153) do
+ActiveRecord::Schema.define(version: 2021_05_28_193708) do
+
+  create_table "movies", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "year"
+    t.string "rated"
+    t.date "released"
+    t.integer "runtime"
+    t.text "genres", default: "[]"
+    t.text "directors", default: "[]"
+    t.text "writers", default: "[]"
+    t.text "actors", default: "[]"
+    t.text "languages", default: "[]"
+    t.text "countries", default: "[]"
+    t.text "awards", default: "[]"
+    t.text "plot"
+    t.string "poster"
+    t.integer "metascore"
+    t.float "imdb_rating"
+    t.integer "imdb_votes"
+    t.string "imdb_id"
+    t.date "dvd"
+    t.bigint "boxoffice"
+    t.string "production"
+    t.string "website"
+    t.boolean "response"
+    t.json "ratings"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
