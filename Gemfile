@@ -44,3 +44,5 @@ gem "devise", "~> 4.8"
 gem "devise_token_auth", "~> 1.1"
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "blueprinter", "~> 0.25.3"
