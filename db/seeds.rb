@@ -20,7 +20,7 @@ movie_ids.each do |id|
     directors:   res['Director'].split(', '),
     writers:     res['Writer'].split(', '),
     actors:      res['Actors'].split(', '),
-    plot:        res['Plot'].split(', '),
+    plot:        res['Plot'],
     languages:   res['Language'].split(', '),
     countries:   res['Country'].split(', '),
     awards:      res['Awards'].split(', '),
