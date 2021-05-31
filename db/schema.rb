@@ -12,19 +12,22 @@
 
 ActiveRecord::Schema.define(version: 2021_05_28_235259) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "movies", force: :cascade do |t|
     t.string "title", null: false
     t.integer "year"
     t.string "rated"
     t.date "released"
     t.integer "runtime"
-    t.text "genres", default: "[]"
-    t.text "directors", default: "[]"
-    t.text "writers", default: "[]"
-    t.text "actors", default: "[]"
-    t.text "languages", default: "[]"
-    t.text "countries", default: "[]"
-    t.text "awards", default: "[]"
+    t.text "genres", default: [], array: true
+    t.text "directors", default: [], array: true
+    t.text "writers", default: [], array: true
+    t.text "actors", default: [], array: true
+    t.text "languages", default: [], array: true
+    t.text "countries", default: [], array: true
+    t.text "awards", default: [], array: true
     t.text "plot"
     t.string "poster"
     t.integer "metascore"
@@ -39,15 +42,15 @@ ActiveRecord::Schema.define(version: 2021_05_28_235259) do
     t.json "ratings"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "showtimes", default: "[]"
+    t.text "showtimes", default: [], array: true
     t.float "price"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.float "score"
     t.text "feedback"
-    t.integer "user_id"
-    t.integer "movie_id"
+    t.bigint "user_id"
+    t.bigint "movie_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["movie_id"], name: "index_reviews_on_movie_id"

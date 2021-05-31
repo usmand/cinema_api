@@ -6,13 +6,13 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.string  :rated
       t.date    :released
       t.integer :runtime
-      t.text    :genres, array: true, default: '[]'
-      t.text    :directors, array: true, default: '[]'
-      t.text    :writers, array: true, default: '[]'
-      t.text    :actors, array: true, default: '[]'
-      t.text    :languages, array: true, default: '[]'
-      t.text    :countries, array: true, default: '[]'
-      t.text    :awards, array: true, default: '[]'
+      t.text    :genres, array: true, default: []
+      t.text    :directors, array: true, default: []
+      t.text    :writers, array: true, default: []
+      t.text    :actors, array: true, default: []
+      t.text    :languages, array: true, default: []
+      t.text    :countries, array: true, default: []
+      t.text    :awards, array: true, default: []
       t.text    :plot
       t.string  :poster
       t.integer :metascore
