@@ -17,6 +17,20 @@ Generate swagger docs
 
 API docs url: `http://localhost:3000/api-docs/index.html`
 
-Tests
+Test users
+----------
+- Owner
+email: owner@example.com
+password: password
+
+- Customer1
+email: customer1@example.com
+password: password
+
+- Customer2
+email: customer2@example.com
+password: password
+
+Tests(Rspec)
 ----------
 `rspec`
