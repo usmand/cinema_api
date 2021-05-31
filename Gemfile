@@ -46,3 +46,12 @@ gem "devise_token_auth", "~> 1.1"
 gem "dotenv-rails", "~> 2.7"
 
 gem "blueprinter", "~> 0.25.3"
+
+gem 'rswag-api'
+gem 'rswag-ui'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rswag-specs'
+end
+
