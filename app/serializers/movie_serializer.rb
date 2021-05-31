@@ -33,4 +33,6 @@ class MovieSerializer < ApplicationSerializer
   field :showtimes do |object, _options|
     JSON.parse(object.showtimes)
   end
+
+  association :reviews, blueprint: ReviewSerializer
 end
