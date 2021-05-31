@@ -55,3 +55,4 @@ group :development, :test do
   gem 'rswag-specs'
 end
 
+gem "pundit", "~> 2.1"

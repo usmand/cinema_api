@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
   end
 
   def update
+    authorize @movie
+
     if @movie.update(movie_params)
       render json: MovieSerializer.render(@movie, root: :movie)
     else
